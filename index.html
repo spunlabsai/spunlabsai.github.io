@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>coming soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #111;
+      --text: #fff;
+      --accent: #fff;
+      --spacing: 0.1em;
+      --font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 480px;
+      margin: auto;
+      padding: 2rem;
+      animation: fadeInUp 0.8s cubic-bezier(.22,.61,.36,1) both;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .brand {
+      letter-spacing: var(--spacing);
+      font-size: 1.1rem;
+      color: #888;
+      margin-bottom: 2rem;
+      text-transform: lowercase;
+      user-select: none;
+    }
+    .headline {
+      font-size: 2.7rem;
+      font-weight: 700;
+      text-transform: lowercase;
+      letter-spacing: var(--spacing);
+      line-height: 1.05;
+      margin: 0 0 1rem 0;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      color: #aaa;
+      margin-bottom: 2.4rem;
+      text-transform: lowercase;
+    }
+    .notify-form {
+      display: flex;
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 320px;
+      margin-bottom: 3rem;
+    }
+    .notify-input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 0.5rem 0 0 0.5rem;
+      background: #222;
+      color: var(--text);
+      font-size: 1rem;
+      letter-spacing: var(--spacing);
+      outline: none;
+      transition: background 0.2s;
+    }
+    .notify-input::placeholder {
+      color: #666;
+      text-transform: lowercase;
+      letter-spacing: var(--spacing);
+    }
+    .notify-btn {
+      padding: 0.75rem 1.3rem;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 0 0.5rem 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: var(--spacing);
+      cursor: pointer;
+      transition: background 0.15s;
+      text-transform: lowercase;
+    }
+    .notify-btn:hover {
+      background: #ddd;
+    }
+    footer {
+      width: 100%;
+      text-align: left;
+      padding: 1.5rem 2rem 1rem 2rem;
+      font-size: 0.9rem;
+      color: #444;
+      letter-spacing: 0.07em;
+      text-transform: lowercase;
+      opacity: 0.5;
+      margin-top: auto;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      .container {
+        align-items: center;
+        padding: 1.3rem;
+      }
+      .brand, .headline, .tagline {
+        text-align: center;
+        width: 100%;
+      }
+      footer {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">spun labs</div>
+    <div class="headline">coming soon</div>
+    <div class="tagline">something simple. something beautiful.</div>
+    <form class="notify-form" autocomplete="off">
+      <input class="notify-input" type="email" placeholder="your email" required />
+      <button class="notify-btn" type="submit">notify me</button>
+    </form>
+  </div>
+  <footer>© 2025 spun labs. all rights reserved.</footer>
+</body>
+</html>
